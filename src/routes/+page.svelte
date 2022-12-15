@@ -81,8 +81,14 @@
 	};
 </script>
 
-<div class="App container max-w-md mx-auto pt-8">
-	<TodoHeader />
-	<AddTodo bind:inputTodo={addTodoValue} on:addNewTodo={addTodoHandler} />
-	<TodosList on:deleteItem={deleteHandler} on:updateTodo={updateHandler} todos={allTodos} />
+<div class="h-full flex justify-between flex-col mx-8">
+	<div class="App container max-w-md mx-auto pt-8">
+		<TodoHeader />
+		<AddTodo bind:inputTodo={addTodoValue} on:addNewTodo={addTodoHandler} />
+		<TodosList on:deleteItem={deleteHandler} on:updateTodo={updateHandler} todos={allTodos} />
+	</div>
+
+	<footer class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t-2 p-1">
+		© Copyright by Bartosz Łuczak | 2022
+	</footer>
 </div>
